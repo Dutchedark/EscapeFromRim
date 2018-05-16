@@ -35,9 +35,9 @@
     </comps>
   </ThingDef>
   
-  <!-- 
-      Makarov Russian Standard issue pistol- drum mag
-  -->
+  <!-- Bullets -->
+  
+  <!-- 9x18mm (PM's / PP-9's) -->
   <ThingDef ParentName="BaseBullet">
     <defName>EFR_Bullet_9x18mm</defName>
     <label>9x18mm bullet</label>
@@ -52,6 +52,13 @@
     </projectile>
   </ThingDef>
 
+  
+  <!-- P I S T O L S -->
+  
+  <!-- 
+      Makarov Russian Standard issue pistol - Normal mag
+  -->
+
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>EFR_Gun_Makarov</defName>
     <label>Makarov Standard Issue Pistol</label>
@@ -63,7 +70,7 @@
     <soundInteract>InteractAutopistol</soundInteract>
     <statBases>
       <WorkToMake>10000</WorkToMake>
-      <Mass>0.80</Mass>
+      <Mass>0.73</Mass>
       <MaxHitPoints>100</MaxHitPoints>
         <AccuracyTouch>0.98</AccuracyTouch>
         <AccuracyShort>0.70</AccuracyShort>
@@ -94,11 +101,152 @@
     </li>
     </verbs>
     <weaponTags>
- <!-- <li>MedievalShields_ValidSidearm</li>
-      <li>CE_Sidearm</li>-->
+ <!--<li>CE_Sidearm</li>-->
       <li>SimpleGun</li>
     </weaponTags>
  <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <!-- 
+      PP-91 "Kedr"
+  -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_Kedr</defName>
+    <label>PP-91 Kedr</label>
+    <description>The PP-91 Kedr SMG was developed in the early 90's by the order of Ministry of Internal Affairs and is now produced at Ziatoust machinery plant (Zlatoustovvskiy Mashinostroitelnyl Zavod ZMZ). At the moment, it is a service weapon of almost all Russian law enforcement forces.</description>
+    <graphicData>
+      <texPath>Things/Kedr</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractMachinePistol</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>0.98</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.06</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.9</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>120</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_9x18mm</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <range>24</range>
+        <burstShotCount>7</burstShotCount>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <soundCast>ShotMachinePistol</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>SimpleGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <!-- 
+      PP-9 Klin
+  -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_Klin</defName>
+    <label>PP-9 Klin</label>
+    <description>A further evolution of the Kedr SMG for new 9x18 PMM cartridge, designated as PP-9 Klin. It has been manufactured since 1996 until 2002 by the order of the Ministry of Internal Affairs.</description>
+    <graphicData>
+      <texPath>Things/Kedr</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractSMG</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>0.98</AccuracyTouch>
+      <AccuracyShort>0.76</AccuracyShort>
+      <AccuracyMedium>0.56</AccuracyMedium>
+      <AccuracyLong>0.09</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.9</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>120</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_9x18mm</defaultProjectile>
+        <warmupTime>0.4</warmupTime>
+        <range>18</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>ShotMachinePistol</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>SimpleGun</li>
+    </weaponTags>
+    <tools>
       <li>
         <label>grip</label>
         <capacities>
