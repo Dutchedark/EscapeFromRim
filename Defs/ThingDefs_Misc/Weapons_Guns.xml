@@ -88,7 +88,7 @@
       <defaultProjectile>ERF_Bullet_9x18mm</defaultProjectile>
       <warmupTime>1</warmupTime>
       <range>12</range>
-      <soundCast>RF_ShotDeringer</soundCast>
+      <soundCast>ShotAutopistol</soundCast>
       <muzzleFlashScale>9</muzzleFlashScale>
     </li>
     </verbs>
