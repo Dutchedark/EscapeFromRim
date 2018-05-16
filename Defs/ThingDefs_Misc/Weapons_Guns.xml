@@ -57,7 +57,7 @@
     <label>Makarov Standard Issue Pistol</label>
     <description>A time-proven PM. Due to the ubiquitous spread of both pistol and ammo it is still being used by Russian Spetznaz, thanks to exceptional reliability, light weight and compact size. The only serious drawback is its lack of a knockdown power.</description>
     <graphicData>
-      <texPath>t e x t u r e</texPath>
+      <texPath>Things/Makarov</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>InteractAutopistol</soundInteract>
