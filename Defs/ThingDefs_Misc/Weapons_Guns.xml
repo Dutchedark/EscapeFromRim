@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="BaseMakeableGun" Abstract="True" ParentName="BaseWeapon">
+    <techLevel>Industrial</techLevel>
+    <smeltable>true</smeltable>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <!-- 
+      Makarov Russian Standard issue pistol- drum mag
+  -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>EFR_Bullet_9x18mm</defName>
+    <label>9x18mm bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMakeableGun">
+    <defName>EFR_Gun_Makarov</defName>
+    <label>Makarov Standard Issue Pistol</label>
+    <description>A time-proven PM. Due to the ubiquitous spread of both pistol and ammo it is still being used by Russian Spetznaz, thanks to exceptional reliability, light weight and compact size. The only serious drawback is its lack of a knockdown power.</description>
+    <graphicData>
+      <texPath>t e x t u r e</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractAutopistol</soundInteract>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>0.80</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+        <AccuracyTouch>0.98</AccuracyTouch>
+        <AccuracyShort>0.70</AccuracyShort>
+        <AccuracyMedium>0.31</AccuracyMedium>
+        <AccuracyLong>0.09</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.3</Weapon_Bulk>
+    </statBases>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <costList>
+      <Steel>40</Steel>
+      <Component>1</Component>
+      <WoodLog>2</WoodLog>
+    </costList>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+    <li>
+      <verbClass>Verb_Shoot</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>ERF_Bullet_9x18mm</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <range>12</range>
+      <soundCast>RF_ShotDeringer</soundCast>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </li>
+    </verbs>
+   <!-- <weaponTags>
+      <li>MedievalShields_ValidSidearm</li>
+      <li>CE_Sidearm</li>
+      <li>SimpleGun</li>
+    </weaponTags>
+ --><tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>
