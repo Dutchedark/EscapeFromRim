@@ -52,6 +52,21 @@
     </projectile>
   </ThingDef>
 
+  <!-- 762x39 (AKM / Vepr's) -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>EFR_Bullet_762x39mm</defName>
+    <label>762x39mm bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>42</damageAmountBase>
+      <speed>140</speed>
+    </projectile>
+  </ThingDef>
+
   
   <!-- P I S T O L S -->
   
@@ -125,6 +140,8 @@
     </tools>
   </ThingDef>
 
+  <!-- S U B M A C H I N E S  G U N S -->
+
   <!-- 
       PP-91 "Kedr"
   -->
@@ -147,7 +164,7 @@
       <AccuracyMedium>0.40</AccuracyMedium>
       <AccuracyLong>0.06</AccuracyLong>
       <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
-      <Weapon_Bulk>0.9</Weapon_Bulk>
+      <Weapon_Bulk>0.5</Weapon_Bulk>
     </statBases>
     <costList>
       <Steel>120</Steel>
@@ -165,8 +182,8 @@
         <defaultProjectile>EFR_Bullet_9x18mm</defaultProjectile>
         <warmupTime>1</warmupTime>
         <range>24</range>
-        <burstShotCount>7</burstShotCount>
-        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
         <soundCast>ShotMachinePistol</soundCast>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -213,12 +230,12 @@
       <WorkToMake>12000</WorkToMake>
       <Mass>1.8</Mass>
       <MaxHitPoints>100</MaxHitPoints>
-      <AccuracyTouch>0.98</AccuracyTouch>
-      <AccuracyShort>0.76</AccuracyShort>
-      <AccuracyMedium>0.56</AccuracyMedium>
-      <AccuracyLong>0.09</AccuracyLong>
+      <AccuracyTouch>1.0</AccuracyTouch>
+      <AccuracyShort>0.81</AccuracyShort>
+      <AccuracyMedium>0.46</AccuracyMedium>
+      <AccuracyLong>0.02</AccuracyLong>
       <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
-      <Weapon_Bulk>0.9</Weapon_Bulk>
+      <Weapon_Bulk>0.5</Weapon_Bulk>
     </statBases>
     <costList>
       <Steel>120</Steel>
@@ -235,9 +252,9 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>EFR_Bullet_9x18mm</defaultProjectile>
         <warmupTime>0.4</warmupTime>
-        <range>18</range>
+        <range>24</range>
         <burstShotCount>5</burstShotCount>
-        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>ShotMachinePistol</soundCast>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -262,6 +279,79 @@
           <li>Poke</li>
         </capacities>
         <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <!-- A S S A U L T  R I F L E -->
+
+  <!-- 
+      AKM
+  -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_AKM</defName>
+    <label>AKM</label>
+    <description>Modernized 7.62mm Kalashnikov, adopted in 1959 to replace AK as a standard service weapon of the Soviet Army. Main differences, compared to AK: enhanced accuracy range, lower weight, new stock, trigger, hammer retarder, muzzle compensator, and other design changes aimed at improving the efficiency of the rifle.</description>
+      <graphicData>
+      <texPath>Things/AKM</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.88</AccuracyShort>
+      <AccuracyMedium>0.78</AccuracyMedium>
+      <AccuracyLong>0.70</AccuracyLong>
+      <RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>360</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_762x39mm</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>32</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>EliteGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
         <cooldownTime>1.6</cooldownTime>
       </li>
     </tools>
