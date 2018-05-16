@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef Name="BaseMakeableGun" Abstract="True" ParentName="BaseWeapon">
+  <ThingDef Name="BaseHumanMakeableGun" Abstract="True" ParentName="BaseWeapon">
     <techLevel>Industrial</techLevel>
     <smeltable>true</smeltable>
     <thingCategories>
@@ -52,7 +52,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseMakeableGun">
+  <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>EFR_Gun_Makarov</defName>
     <label>Makarov Standard Issue Pistol</label>
     <description>A time-proven PM. Due to the ubiquitous spread of both pistol and ammo it is still being used by Russian Spetznaz, thanks to exceptional reliability, light weight and compact size. The only serious drawback is its lack of a knockdown power.</description>
@@ -77,6 +77,10 @@
       <Component>1</Component>
       <WoodLog>2</WoodLog>
     </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
     <generateCommonality>0.3</generateCommonality>
     <verbs>
     <li>
@@ -89,12 +93,12 @@
       <muzzleFlashScale>9</muzzleFlashScale>
     </li>
     </verbs>
-   <!-- <weaponTags>
-      <li>MedievalShields_ValidSidearm</li>
-      <li>CE_Sidearm</li>
+    <weaponTags>
+ <!-- <li>MedievalShields_ValidSidearm</li>
+      <li>CE_Sidearm</li>-->
       <li>SimpleGun</li>
     </weaponTags>
- --><tools>
+ <tools>
       <li>
         <label>grip</label>
         <capacities>
