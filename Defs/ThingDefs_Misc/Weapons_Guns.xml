@@ -72,9 +72,6 @@
       <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
       <Weapon_Bulk>0.3</Weapon_Bulk>
     </statBases>
-    <thingCategories>
-      <li>WeaponsRanged</li>
-    </thingCategories>
     <costList>
       <Steel>40</Steel>
       <Component>1</Component>
@@ -85,7 +82,7 @@
     <li>
       <verbClass>Verb_Shoot</verbClass>
       <hasStandardCommand>true</hasStandardCommand>
-      <defaultProjectile>ERF_Bullet_9x18mm</defaultProjectile>
+      <defaultProjectile>EFR_Bullet_9x18mm</defaultProjectile>
       <warmupTime>1</warmupTime>
       <range>12</range>
       <soundCast>ShotAutopistol</soundCast>
