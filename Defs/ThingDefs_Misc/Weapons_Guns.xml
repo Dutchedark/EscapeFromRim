@@ -52,7 +52,7 @@
     </projectile>
   </ThingDef>
 
-  <!-- 762x39 (AKM / Vepr's) -->
+  <!-- 762x39 HP (AKM / Vepr's) -->
   <ThingDef ParentName="BaseBullet">
     <defName>EFR_Bullet_762x39mm</defName>
     <label>762x39mm bullet</label>
@@ -62,8 +62,38 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>42</damageAmountBase>
+      <damageAmountBase>58</damageAmountBase>
       <speed>140</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- 5.45x39 HP (AK-74's) -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>EFR_Bullet_5.45x39mm</defName>
+    <label>762x39mm bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>60</damageAmountBase>
+      <speed>140</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- 5.56x45 HP (M4's) -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>EFR_Bullet_5.56x45mm</defName>
+    <label>5.56x45mm bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>58</damageAmountBase>
+      <speed>200</speed>
     </projectile>
   </ThingDef>
 
@@ -355,5 +385,290 @@
         <cooldownTime>1.6</cooldownTime>
       </li>
     </tools>
+  </ThingDef>-->
+
+  <!--
+      AK-74N
+  -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_AK-74N</defName>
+    <label>AK-74N</label>
+    <description>Kalashnikov 5.45 mm assault rifle, developed in 1970 by M. T. Kalashnikov, became a further evolution of AKM due to adoption of the new 5.45x39 ammunition by the military. The key design difference from the standard AK-74 is a side mount for optical and night scopes.</description>
+    <graphicData>
+      <texPath>Things/AK-74N</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.86</AccuracyShort>
+      <AccuracyMedium>0.72</AccuracyMedium>
+      <AccuracyLong>0.70</AccuracyLong>
+      <RangedWeapon_Cooldown>1.20</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>360</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_5.45x39mm</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>34</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>EliteGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>-->
+
+  <!--
+      AKS-74U
+  -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_AKS-74U</defName>
+    <label>AKS-74U</label>
+    <description>Reduced version of AKS-74 assault rifle, developed in the early 80s for combat vehicle crews and airborne troops, also became very popular with law enforcement and special forces for its compact size.</description>
+    <graphicData>
+      <texPath>Things/AKS-74U</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.4</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.94</AccuracyShort>
+      <AccuracyMedium>0.71</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>1.20</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>360</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_762x39mm</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>28</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>EliteGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>-->
+
+  <!--
+      Vepr KM/VPO-136
+  -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_Vepr</defName>
+    <label>AKM</label>
+    <description>Modernized 7.62mm Kalashnikov, adopted in 1959 to replace AK as a standard service weapon of the Soviet Army. Main differences, compared to AK: enhanced accuracy range, lower weight, new stock, trigger, hammer retarder, muzzle compensator, and other design changes aimed at improving the efficiency of the rifle.</description>
+    <graphicData>
+      <texPath>Things/Vepr</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.88</AccuracyShort>
+      <AccuracyMedium>0.78</AccuracyMedium>
+      <AccuracyLong>0.70</AccuracyLong>
+      <RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>360</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_762x39mm</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>29</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>EliteGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>-->
+
+  <!--
+      M4
+  -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_M4</defName>
+    <label>AKM</label>
+    <description>Modernized 7.62mm Kalashnikov, adopted in 1959 to replace AK as a standard service weapon of the Soviet Army. Main differences, compared to AK: enhanced accuracy range, lower weight, new stock, trigger, hammer retarder, muzzle compensator, and other design changes aimed at improving the efficiency of the rifle.</description>
+    <graphicData>
+      <texPath>Things/M4</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.88</AccuracyShort>
+      <AccuracyMedium>0.78</AccuracyMedium>
+      <AccuracyLong>0.70</AccuracyLong>
+      <RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>360</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_762x39mm</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>32</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>EliteGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
   </ThingDef>
+
 </Defs>
