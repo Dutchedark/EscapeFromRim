@@ -536,7 +536,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>EFR_Gun_Vepr</defName>
     <label>AKM</label>
-    <description>Modernized 7.62mm Kalashnikov, adopted in 1959 to replace AK as a standard service weapon of the Soviet Army. Main differences, compared to AK: enhanced accuracy range, lower weight, new stock, trigger, hammer retarder, muzzle compensator, and other design changes aimed at improving the efficiency of the rifle.</description>
+    <description>Semi-automatic hunting carbine of 7.62×39 mm caliber. It was created on the platform of Kalashnikov (AKM) and has an identical appearance, weight and dimensions. Designed for professional and amateur hunting of medium and big game, as well as sporting use.</description>
     <graphicData>
       <texPath>Things/Vepr</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -607,7 +607,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>EFR_Gun_M4</defName>
     <label>AKM</label>
-    <description>Modernized 7.62mm Kalashnikov, adopted in 1959 to replace AK as a standard service weapon of the Soviet Army. Main differences, compared to AK: enhanced accuracy range, lower weight, new stock, trigger, hammer retarder, muzzle compensator, and other design changes aimed at improving the efficiency of the rifle.</description>
+    <description>Colt M4A1- an assault rifle (carbine), designed in the USA on the basis of AR-15 platform for 5.56x45 NATO cartridge. It was developed primarily for use by vehicle operators and fireteams, who required a more compact and lighter weapon than a standard full-length rifle, but using the same ordnance. However, US SOCOM (United States Special Operations Command) was soon to adopt the M4A1 for all subordinate units, followed by general introduction of M4A1 into service in the US Army and Marine Corps.</description>
     <graphicData>
       <texPath>Things/M4</texPath>
       <graphicClass>Graphic_Single</graphicClass>
