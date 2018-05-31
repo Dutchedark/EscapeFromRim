@@ -35,9 +35,9 @@
     </comps>
   </ThingDef>
   
-  <!-- Bullets -->
+  <!-- B u l l e t s -->
   
-  <!-- 9x18mm (PM's / PP-9's) -->
+  <!-- 9x18mm P gzh (PM's / PP-9's) -->
   <ThingDef ParentName="BaseBullet">
     <defName>EFR_Bullet_9x18mm</defName>
     <label>9x18mm bullet</label>
@@ -47,12 +47,57 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>14</damageAmountBase>
+      <damageAmountBase>53</damageAmountBase>
       <speed>70</speed>
     </projectile>
   </ThingDef>
 
-  <!-- 762x39 HP (AKM / Vepr's) -->
+  <!-- 9x19mm PST gzh (PP-19-01 / MP5 / MPX / Glocks / other 9mm pistols) -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>EFR_Bullet_9x19mm</defName>
+    <label>9x19mm bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>53</damageAmountBase>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+  
+  <!-- 9x21mm sp12 (Srimp) -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>EFR_Bullet_9x21mm</defName>
+    <label>9x21mm bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>77</damageAmountBase>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  
+  <!-- 762x25mm T Gzh (TT) -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>EFR_Bullet_762x25mm</defName>
+    <label>762x25mm bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>60</damageAmountBase>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- 762x39 HP (AKM / Vepr's / SKS) -->
   <ThingDef ParentName="BaseBullet">
     <defName>EFR_Bullet_762x39mm</defName>
     <label>762x39mm bullet</label>
@@ -67,6 +112,21 @@
     </projectile>
   </ThingDef>
 
+  <!-- 9x39 SP5 (VAL / VSS) -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>EFR_Bullet_9x39mm</defName>
+    <label>9x39mm bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>68</damageAmountBase>
+      <speed>140</speed>
+    </projectile>
+  </ThingDef>
+
   <!-- 5.45x39 HP (AK-74's) -->
   <ThingDef ParentName="BaseBullet">
     <defName>EFR_Bullet_5.45x39mm</defName>
@@ -77,8 +137,38 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>60</damageAmountBase>
+      <damageAmountBase>70</damageAmountBase>
       <speed>140</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- 7.62x51 M80 (SASS (RSASS)/ Cheap SASS (M1A) / Slow SASS (DVL-10)) -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>EFR_Bullet_7.62x51mm</defName>
+    <label>7.62x51mm bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>68</damageAmountBase>
+      <speed>180</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- 7.62x54R SNB (SV-98) -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>EFR_Bullet_762x54mm</defName>
+    <label>7.62x54mm bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>88</damageAmountBase>
+      <speed>200</speed>
     </projectile>
   </ThingDef>
 
@@ -169,7 +259,493 @@
       </li>
     </tools>
   </ThingDef>
+    
+  <!--- APS --->
 
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_APS</defName>
+    <label>APS</label>
+    <description>The Stechkin automatic pistol or APS is a Soviet selective fire machine pistol. It bears the name of its developer, Igor Stechkin.</description>
+    <graphicData>
+      <texPath>Things/APS</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.42</AccuracyShort>
+      <AccuracyMedium>0.78</AccuracyMedium>
+      <AccuracyLong>0.36</AccuracyLong>
+      <RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>360</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_9x18mm</defaultProjectile>
+        <warmupTime>0.4</warmupTime>
+        <range>18</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>ShotAutopistol</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>EliteGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <!-- 
+      GLOCK 17
+  -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_GLOCK17</defName>
+    <label>GLOCK 17</label>
+    <description>Glock 17 is an Austrian pistol designed by Glock company for the Austrian army purposes. Thanks to both to its impressive combat characteristics and reliablity gained wide recognition and popularity also as a police, shooting sports and civilian self-defence weapon.</description>
+    <graphicData>
+      <texPath>Things/GLOCK17</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractAutopistol</soundInteract>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>0.73</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+        <AccuracyTouch>0.88</AccuracyTouch>
+        <AccuracyShort>0.74</AccuracyShort>
+        <AccuracyMedium>0.37</AccuracyMedium>
+        <AccuracyLong>0.12</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.3</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+      <Component>1</Component>
+      <WoodLog>2</WoodLog>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+    <li>
+      <verbClass>Verb_Shoot</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>EFR_Bullet_9x19mm</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <range>13</range>
+      <soundCast>ShotAutopistol</soundCast>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </li>
+    </verbs>
+    <weaponTags>
+ <!--<li>CE_Sidearm</li>-->
+      <li>SimpleGun</li>
+    </weaponTags>
+ <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <!-- 
+      MP-443 "Grach"
+  -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_MP-443</defName>
+    <label>MP-443 "Grach"</label>
+    <description>Russian-produced semiautomatic 9x19 pistol, a service weapon of Russian army, special forces of Ministry of internal affairs and other defence and law enforcement agencies.</description>
+    <graphicData>
+      <texPath>Things/MP-443</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractAutopistol</soundInteract>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>0.73</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+        <AccuracyTouch>0.96</AccuracyTouch>
+        <AccuracyShort>0.71</AccuracyShort>
+        <AccuracyMedium>0.26</AccuracyMedium>
+        <AccuracyLong>0.04</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.3</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+      <Component>1</Component>
+      <WoodLog>2</WoodLog>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+    <li>
+      <verbClass>Verb_Shoot</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>EFR_Bullet_9x19mm</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <range>14</range>
+      <soundCast>ShotAutopistol</soundCast>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </li>
+    </verbs>
+    <weaponTags>
+ <!--<li>CE_Sidearm</li>-->
+      <li>SimpleGun</li>
+    </weaponTags>
+ <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <!-- 
+      P226R
+  -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_P226R</defName>
+    <label>P226R</label>
+    <description>The SIG Sauer P226R is a full-sized, service-type pistol made by SIG Sauer, a standard service weapon of Navy SEALs. Chambered for the 9x19mm Parabellum, features a Picatinny rail mount on the underside of a frame.</description>
+    <graphicData>
+      <texPath>Things/P226R</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractAutopistol</soundInteract>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>0.73</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+        <AccuracyTouch>0.99</AccuracyTouch>
+        <AccuracyShort>0.74</AccuracyShort>
+        <AccuracyMedium>0.44</AccuracyMedium>
+        <AccuracyLong>0.02</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.3</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <Component>1</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+    <li>
+      <verbClass>Verb_Shoot</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>EFR_Bullet_9x19mm</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <range>12</range>
+      <soundCast>ShotAutopistol</soundCast>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </li>
+    </verbs>
+    <weaponTags>
+ <!--<li>CE_Sidearm</li>-->
+      <li>SimpleGun</li>
+    </weaponTags>
+ <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <!-- 
+      PB pistol
+  -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_PB</defName>
+    <label>PB pistol</label>
+    <description>PB silenced pistol (GRAU Index 6П9) was designed for the purposes of army reconnaissance groups and USSR KGB personnel and introduced into service in 1967. Still operated nowadays by FSB special forces and internal troops of Ministry of Internal Affairs.</description>
+    <graphicData>
+      <texPath>Things/PB</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractAutopistol</soundInteract>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>0.73</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+        <AccuracyTouch>0.88</AccuracyTouch>
+        <AccuracyShort>0.86</AccuracyShort>
+        <AccuracyMedium>0.46</AccuracyMedium>
+        <AccuracyLong>0.10</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.3</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>80</Steel>
+      <Component>2</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+    <li>
+      <verbClass>Verb_Shoot</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>EFR_Bullet_9x18mm</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <range>19</range>
+      <soundCast>ShotAutopistol</soundCast>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </li>
+    </verbs>
+    <weaponTags>
+ <!--<li>CE_Sidearm</li>-->
+      <li>SimpleGun</li>
+    </weaponTags>
+ <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <!-- 
+      SR-1MP Gyurza "Srimp"
+  -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_SR-1MP</defName>
+    <label>SR-1MP Gyurza "Srimp"</label>
+    <description>The Serdyukov automatic pistol - also known as SPS and Gyurza (“Viper”), GRAU index 6P53. Pistol designed for the Russian Federation special forces purposes by P. Serdyukov and I. Belyaev, for 9x21 mm cartridge.</description>
+    <graphicData>
+      <texPath>Things/SR-1MP</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractAutopistol</soundInteract>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>0.73</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+        <AccuracyTouch>0.98</AccuracyTouch>
+        <AccuracyShort>0.88</AccuracyShort>
+        <AccuracyMedium>0.45</AccuracyMedium>
+        <AccuracyLong>0.12</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.3</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+      <Component>1</Component>
+      <WoodLog>2</WoodLog>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+    <li>
+      <verbClass>Verb_Shoot</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>EFR_Bullet_9x21mm</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <range>22</range>
+      <soundCast>ShotAutopistol</soundCast>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </li>
+    </verbs>
+    <weaponTags>
+ <!--<li>CE_Sidearm</li>-->
+      <li>SimpleGun</li>
+    </weaponTags>
+ <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <!-- 
+      TT pistol
+  -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_TT</defName>
+    <label>TT pistol</label>
+    <description>A legendary pistol. It has seen numerous military conflicts and is still being in service in the certain spots of our planet, in one modification or another. This one is a classic TT-33, the most mass-produced version. It features Browning short-recoil tilting-barrel system, but very different otherwise - purposefully simple, single-action, no safety measures except half cock notch, it is able to withstand horrible operating abuse. Thanks to powerful 7.62x25 cartridge and relatively long barrel, TT boasts high muzzle velocity, penetration and impressive accuracy, even over long distances.</description>
+    <graphicData>
+      <texPath>Things/TT</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractAutopistol</soundInteract>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>0.73</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+        <AccuracyTouch>0.88</AccuracyTouch>
+        <AccuracyShort>0.78</AccuracyShort>
+        <AccuracyMedium>0.48</AccuracyMedium>
+        <AccuracyLong>0.21</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.3</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <Component>1</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+    <li>
+      <verbClass>Verb_Shoot</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>EFR_Bullet_762x25mm</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <range>26</range>
+      <soundCast>ShotPistol</soundCast>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </li>
+    </verbs>
+    <weaponTags>
+ <!--<li>CE_Sidearm</li>-->
+      <li>SimpleGun</li>
+    </weaponTags>
+ <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
   <!-- S U B M A C H I N E S  G U N S -->
 
   <!-- 
@@ -285,6 +861,219 @@
         <range>24</range>
         <burstShotCount>5</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>ShotMachinePistol</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>SimpleGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <!-- 
+      MP5
+  -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_MP5</defName>
+    <label>MP5</label>
+    <description>HK MP5 9x19 submachinegun with Navy 3 Round Burst firing mechanism version, which features three-round cutoff. Widely acclaimed model of a submachinegun, primarily known as weapon of GSG9 and similar forces of the world, and famous through frequent appearance in movies and video games.</description>
+    <graphicData>
+      <texPath>Things/MP5</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractMachinePistol</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>0.98</AccuracyTouch>
+      <AccuracyShort>0.73</AccuracyShort>
+      <AccuracyMedium>0.37</AccuracyMedium>
+      <AccuracyLong>0.02</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.5</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>120</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_9x19mm</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <range>29</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>ShotMachinePistol</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>SimpleGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <!-- 
+      MPX
+  -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_MPX</defName>
+    <label>MPX</label>
+    <description>SIG MPX boasts the unprecedented operation speed in the familiar form factor of the AR platform. Short-stroke gas piston allows SIG MPX to use the full range of 9 mm ammunition without any adjustments to the gas valve. Full-sized mount provides the means of installing a wide range of scopes and sighting devices.</description>
+    <graphicData>
+      <texPath>Things/MPX</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractMachinePistol</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>0.98</AccuracyTouch>
+      <AccuracyShort>0.79</AccuracyShort>
+      <AccuracyMedium>0.43</AccuracyMedium>
+      <AccuracyLong>0.08</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.5</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>120</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_9x19mm</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <range>31</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>ShotMachinePistol</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>SimpleGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <!-- 
+      PP-19-01 Vityaz-SN
+  -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_PP-19-01</defName>
+    <label>PP-19-01 Vityaz-SN</label>
+    <description>Russian submachinegun based on the AKS-74U design. Standard-issue for many law enforcement and military units of the Russian Federation.</description>
+    <graphicData>
+      <texPath>Things/PP-19-01</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractMachinePistol</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>1.00</AccuracyTouch>
+      <AccuracyShort>0.69</AccuracyShort>
+      <AccuracyMedium>0.38</AccuracyMedium>
+      <AccuracyLong>0.06</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.5</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>120</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_9x18mm</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <range>27</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
         <soundCast>ShotMachinePistol</soundCast>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -535,7 +1324,7 @@
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>EFR_Gun_Vepr</defName>
-    <label>AKM</label>
+    <label>Vepr KM/VPO-136</label>
     <description>Semi-automatic hunting carbine of 7.62×39 mm caliber. It was created on the platform of Kalashnikov (AKM) and has an identical appearance, weight and dimensions. Designed for professional and amateur hunting of medium and big game, as well as sporting use.</description>
     <graphicData>
       <texPath>Things/Vepr</texPath>
@@ -606,7 +1395,7 @@
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>EFR_Gun_M4</defName>
-    <label>AKM</label>
+    <label>M4</label>
     <description>Colt M4A1- an assault rifle (carbine), designed in the USA on the basis of AR-15 platform for 5.56x45 NATO cartridge. It was developed primarily for use by vehicle operators and fireteams, who required a more compact and lighter weapon than a standard full-length rifle, but using the same ordnance. However, US SOCOM (United States Special Operations Command) was soon to adopt the M4A1 for all subordinate units, followed by general introduction of M4A1 into service in the US Army and Marine Corps.</description>
     <graphicData>
       <texPath>Things/M4</texPath>
@@ -640,9 +1429,498 @@
         <defaultProjectile>EFR_Bullet_762x39mm</defaultProjectile>
         <warmupTime>0.9</warmupTime>
         <range>32</range>
-        <burstShotCount>3</burstShotCount>
-        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
         <soundCast>ShotAssaultRifle</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>EliteGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <!--- A S S A U L T  C A R B I N E S --->
+    
+  <!--- AS VAL --->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_VAL</defName>
+    <label>AS VAL</label>
+    <description>AS VAL (Avtomat Specialniy, Special Automatic Rifle) - silenced automatic rifle with integral suppressor designed for special forces units. Developed in TSNIITochMash on the VSS Vintorez platform.</description>
+    <graphicData>
+      <texPath>Things/VAL</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>1.00</AccuracyTouch>
+      <AccuracyShort>0.98</AccuracyShort>
+      <AccuracyMedium>0.68</AccuracyMedium>
+      <AccuracyLong>0.12</AccuracyLong>
+      <RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>360</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_9x39mm</defaultProjectile>
+        <warmupTime>0.4</warmupTime>
+        <range>26</range>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <muzzleFlashScale>3</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>EliteGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+    
+  <!--- OP-SKS --->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_OP-SKS</defName>
+    <label>OP-SKS</label>
+    <description>Molot OP-SKS Carbine is designed for loading with 7,62×39 - the most popular ammunition. The weight and dimensions make the carbine ergonomic for shooters of any age and height. It has been used for all types of traditional Russian hunting for more than 50 years. Tested on predators in Africa, Southeast Asia, Central America, Middle East.</description>
+    <graphicData>
+      <texPath>Things/OP-SKS</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.42</AccuracyShort>
+      <AccuracyMedium>0.78</AccuracyMedium>
+      <AccuracyLong>0.36</AccuracyLong>
+      <RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>360</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_9x39mm</defaultProjectile>
+        <warmupTime>0.4</warmupTime>
+        <range>26</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>EliteGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <!--- D E S I G N A T E D  M A R K S M A N  R I F L E --->
+    
+  <!--- M1A --->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_M1A</defName>
+    <label>M1A</label>
+    <description>The Springfield Armory M1A is a civilian version of the M14 rifle designed and manufactured by Springfield Armory, Inc.</description>
+    <graphicData>
+      <texPath>Things/M1A</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.43</AccuracyShort>
+      <AccuracyMedium>0.88</AccuracyMedium>
+      <AccuracyLong>0.56</AccuracyLong>
+      <RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>360</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_762x51mm</defaultProjectile>
+        <warmupTime>0.4</warmupTime>
+        <range>45</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>ShotSniperRifle</soundCast>
+        <muzzleFlashScale>10</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>EliteGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+    
+  <!--- RSASS --->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_RSASS</defName>
+    <label>RSASS</label>
+    <description>The Remington Semi Automatic Sniper System is the culmination of a joint effort between Remington Arms and JP Enterprises to develop a highly accurate and superbly built rapid firing sniper rifle. This weapon delivers sub-MOA accuracy out to 800 meters and beyond while providing the tactical advantage of a semi-automatic platform.</description>
+    <graphicData>
+      <texPath>Things/RSASS</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>0.30</AccuracyTouch>
+      <AccuracyShort>0.52</AccuracyShort>
+      <AccuracyMedium>0.88</AccuracyMedium>
+      <AccuracyLong>0.66</AccuracyLong>
+      <RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>360</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_762x51mm</defaultProjectile>
+        <warmupTime>0.4</warmupTime>
+        <range>67</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>ShotSniperRifle</soundCast>
+        <muzzleFlashScale>10</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>EliteGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+    
+  <!--- VSS Vintorez --->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_VSS</defName>
+    <label>VSS Vintorez</label>
+    <description>VSS (Vintovka Sniperskaya, Special Sniper Rifle) - suppressed sniper rifle with an integral suppressor, designed in the 80s in TSNIITochMash Institute for the needs of special-purpose teams and task forces.</description>
+    <graphicData>
+      <texPath>Things/VSS</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>0.54</AccuracyTouch>
+      <AccuracyShort>0.48</AccuracyShort>
+      <AccuracyMedium>0.86</AccuracyMedium>
+      <AccuracyLong>0.49</AccuracyLong>
+      <RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>360</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_9x39mm</defaultProjectile>
+        <warmupTime>0.4</warmupTime>
+        <range>38</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <muzzleFlashScale>3</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>EliteGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <!--- S N I P E R  R I F L E S --->
+    
+  <!--- DVL-10 --->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_DVL-10</defName>
+    <label>DVL-10</label>
+    <description>DVL-10 is a lightweight, compact, and silenced rifle in proprietary and current military subsonic calibers and has been developed for special service and combat missions where exceptional accuracy and range are needed. Equipped with a standard Lobaev foldable butt-stock and Lobaev Hummer Barrels stainless steel match-grade barrel./description>
+    <graphicData>
+      <texPath>Things/DVL-10</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.42</AccuracyShort>
+      <AccuracyMedium>0.78</AccuracyMedium>
+      <AccuracyLong>0.36</AccuracyLong>
+      <RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>360</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_9x39mm</defaultProjectile>
+        <warmupTime>0.4</warmupTime>
+        <range>73</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>ShotSniperRifle</soundCast>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <!--<li>CE_Sidearm</li>-->
+      <li>EliteGun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+    
+  <!--- SV-98 --->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>EFR_Gun_SV-98</defName>
+    <label>SV-98</label>
+    <description>SV-98 is a Russian sniper rifle developed in 1998-2000 by a group of weapon engineers led by V.Stronskly. Serially produced by IzhMash group. It is a magazine-fed bolt-action rifle, designed to engage military personnel at distances of up to 1000 m.</description>
+    <graphicData>
+      <texPath>Things/SV-98</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <AccuracyTouch>0.01</AccuracyTouch>
+      <AccuracyShort>0.32</AccuracyShort>
+      <AccuracyMedium>0.82</AccuracyMedium>
+      <AccuracyLong>0.76</AccuracyLong>
+      <RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>360</Steel>
+      <Component>3</Component>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <generateCommonality>0.3</generateCommonality>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>EFR_Bullet_762x54mm</defaultProjectile>
+        <warmupTime>0.4</warmupTime>
+        <range>89</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>ShotSniperRifle</soundCast>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
