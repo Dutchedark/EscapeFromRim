@@ -129,7 +129,7 @@
 
   <!-- 5.45x39 HP (AK-74's) -->
   <ThingDef ParentName="BaseBullet">
-    <defName>EFR_Bullet_5.45x39mm</defName>
+    <defName>EFR_Bullet_545x39mm</defName>
     <label>762x39mm bullet</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
@@ -144,7 +144,7 @@
 
   <!-- 7.62x51 M80 (SASS (RSASS)/ Cheap SASS (M1A) / Slow SASS (DVL-10)) -->
   <ThingDef ParentName="BaseBullet">
-    <defName>EFR_Bullet_7.62x51mm</defName>
+    <defName>EFR_Bullet_762x51mm</defName>
     <label>7.62x51mm bullet</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
@@ -174,7 +174,7 @@
 
   <!-- 5.56x45 HP (M4's) -->
   <ThingDef ParentName="BaseBullet">
-    <defName>EFR_Bullet_5.56x45mm</defName>
+    <defName>EFR_Bullet_556x45mm</defName>
     <label>5.56x45mm bullet</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
@@ -260,7 +260,7 @@
     </tools>
   </ThingDef>
     
-  <!--- APS --->
+  <!-- APS -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>EFR_Gun_APS</defName>
@@ -334,7 +334,7 @@
   -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>EFR_Gun_GLOCK17</defName>
+    <defName>EFR_Gun_GLOCK17_Pistol</defName>
     <label>GLOCK 17</label>
     <description>Glock 17 is an Austrian pistol designed by Glock company for the Austrian army purposes. Thanks to both to its impressive combat characteristics and reliablity gained wide recognition and popularity also as a police, shooting sports and civilian self-defence weapon.</description>
     <graphicData>
@@ -404,7 +404,7 @@
   -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>EFR_Gun_MP-443</defName>
+    <defName>EFR_Gun_MP443_Pistol</defName>
     <label>MP-443 "Grach"</label>
     <description>Russian-produced semiautomatic 9x19 pistol, a service weapon of Russian army, special forces of Ministry of internal affairs and other defence and law enforcement agencies.</description>
     <graphicData>
@@ -895,7 +895,7 @@
   -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>EFR_Gun_MP5</defName>
+    <defName>EFR_Gun_MP5_SMG</defName>
     <label>MP5</label>
     <description>HK MP5 9x19 submachinegun with Navy 3 Round Burst firing mechanism version, which features three-round cutoff. Widely acclaimed model of a submachinegun, primarily known as weapon of GSG9 and similar forces of the world, and famous through frequent appearance in movies and video games.</description>
     <graphicData>
@@ -1037,7 +1037,7 @@
   -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>EFR_Gun_PP-19-01</defName>
+    <defName>EFR_Gun_PP-19-01_SMG</defName>
     <label>PP-19-01 Vityaz-SN</label>
     <description>Russian submachinegun based on the AKS-74U design. Standard-issue for many law enforcement and military units of the Russian Federation.</description>
     <graphicData>
@@ -1213,7 +1213,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>EFR_Bullet_5.45x39mm</defaultProjectile>
+        <defaultProjectile>EFR_Bullet_545x39mm</defaultProjectile>
         <warmupTime>0.9</warmupTime>
         <range>34</range>
         <burstShotCount>5</burstShotCount>
@@ -1394,7 +1394,7 @@
   -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>EFR_Gun_M4</defName>
+    <defName>EFR_Gun_M4_AR</defName>
     <label>M4</label>
     <description>Colt M4A1- an assault rifle (carbine), designed in the USA on the basis of AR-15 platform for 5.56x45 NATO cartridge. It was developed primarily for use by vehicle operators and fireteams, who required a more compact and lighter weapon than a standard full-length rifle, but using the same ordnance. However, US SOCOM (United States Special Operations Command) was soon to adopt the M4A1 for all subordinate units, followed by general introduction of M4A1 into service in the US Army and Marine Corps.</description>
     <graphicData>
@@ -1460,9 +1460,9 @@
     </tools>
   </ThingDef>
   
-  <!--- A S S A U L T  C A R B I N E S --->
+  <!-- A S S A U L T  C A R B I N E S -->
     
-  <!--- AS VAL --->
+  <!-- AS VAL -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>EFR_Gun_VAL</defName>
@@ -1531,7 +1531,7 @@
     </tools>
   </ThingDef>
     
-  <!--- OP-SKS --->
+  <!-- OP-SKS -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>EFR_Gun_OP-SKS</defName>
@@ -1600,9 +1600,9 @@
     </tools>
   </ThingDef>
   
-  <!--- D E S I G N A T E D  M A R K S M A N  R I F L E --->
+  <!-- D E S I G N A T E D  M A R K S M A N  R I F L E -->
     
-  <!--- M1A --->
+  <!-- M1A -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>EFR_Gun_M1A</defName>
@@ -1671,7 +1671,7 @@
     </tools>
   </ThingDef>
     
-  <!--- RSASS --->
+  <!-- RSASS -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>EFR_Gun_RSASS</defName>
@@ -1740,7 +1740,7 @@
     </tools>
   </ThingDef>
     
-  <!--- VSS Vintorez --->
+  <!-- VSS Vintorez -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>EFR_Gun_VSS</defName>
@@ -1809,14 +1809,14 @@
     </tools>
   </ThingDef>
   
-  <!--- S N I P E R  R I F L E S --->
+  <!-- S N I P E R  R I F L E S -->
     
-  <!--- DVL-10 --->
+  <!-- DVL-10 -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>EFR_Gun_DVL-10</defName>
+    <defName>EFR_Gun_DVL</defName>
     <label>DVL-10</label>
-    <description>DVL-10 is a lightweight, compact, and silenced rifle in proprietary and current military subsonic calibers and has been developed for special service and combat missions where exceptional accuracy and range are needed. Equipped with a standard Lobaev foldable butt-stock and Lobaev Hummer Barrels stainless steel match-grade barrel./description>
+    <description>DVL-10 is a lightweight, compact, and silenced rifle in proprietary and current military subsonic calibers and has been developed for special service and combat missions where exceptional accuracy and range are needed. Equipped with a standard Lobaev foldable butt-stock and Lobaev Hummer Barrels stainless steel match-grade barrel.</description>
     <graphicData>
       <texPath>Things/DVL-10</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1880,10 +1880,10 @@
     </tools>
   </ThingDef>
     
-  <!--- SV-98 --->
+  <!-- SV-98 -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>EFR_Gun_SV-98</defName>
+    <defName>EFR_Gun_SV</defName>
     <label>SV-98</label>
     <description>SV-98 is a Russian sniper rifle developed in 1998-2000 by a group of weapon engineers led by V.Stronskly. Serially produced by IzhMash group. It is a magazine-fed bolt-action rifle, designed to engage military personnel at distances of up to 1000 m.</description>
     <graphicData>
